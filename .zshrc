@@ -1,36 +1,16 @@
-# path
-export PATH=/opt/brew/bin:$PATH
+export ZSH=/Users/hadrori/.oh-my-zsh
+ZSH_THEME="amuse"
+plugins=(git ruby osx bundler brew rails emoji-clock)
+
+# User configuration
+export PATH="/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
+source $ZSH/oh-my-zsh.sh
+
+# language
+export LANG=ja_JP.UTF-8
+
+# init henv
+eval "$(~/.henv/bin/henv init)"
 
 # alias
 alias emacs="emacs -nw"
-
-# lang
-export LANG=ja_JP.UTF-8
-
-# color
-autoload -Uz colors
-colors
-
-# emacs keybind
-bindkey -e
-
-# history
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
-setopt share_history
-
-# comp
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# beep
-setopt no_beep
-
-# change directory
-setopt auto_cd
-setopt auto_pushd
-
-# add completion
-fpath=(/opt/brew/share/zsh-completions $fpath)
