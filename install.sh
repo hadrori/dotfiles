@@ -21,6 +21,6 @@ if [ -e ~/.tmux.conf ]; then
   echo -e "${red}${bold}[ERROR]:${restore_color} .tmux.conf already exists"
   echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."    
 else
-  ln -s ./.tmux.conf ~/.tmux.conf
+  ln -s $(echo $(pwd)/.tmux.conf) ~/.tmux.conf
   echo -e "${green}${bold}[OK]:${restore_color} .tmux.conf has linked"
 fi
