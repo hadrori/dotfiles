@@ -9,7 +9,7 @@ green='\033[0;32m'
 bold='\033[1m'
 restore_color='\033[0m\033[22m'
 
-if [ -x ~/.bash_profile ]; then
+if [ -e ~/.bash_profile ]; then
   echo -e "${red}${bold}[ERROR]:${restore_color} .bash_profile already exists"
   echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."
 else
@@ -17,7 +17,7 @@ else
   echo -e "${green}${bold}[OK]:${restore_color} .bash_profile has linked"
 fi
 
-if [ -x ~/.tmux.conf ]; then
+if [ -e ~/.tmux.conf ]; then
   echo -e "${red}${bold}[ERROR]:${restore_color} .tmux.conf already exists"
   echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."    
 else
