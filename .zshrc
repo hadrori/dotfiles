@@ -33,4 +33,4 @@ setopt auto_cd
 setopt auto_pushd
 
 # add completion
-fpath=/opt/brew/share/zsh-completions
+fpath=(/opt/brew/share/zsh-completions $fpath)
