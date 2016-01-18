@@ -24,3 +24,11 @@ else
   ln -s $(echo $(pwd)/.tmux.conf) ~/.tmux.conf
   echo -e "${green}${bold}[OK]:${restore_color} .tmux.conf has linked"
 fi
+
+if [ -e ~/.zshrc ]; then
+  echo -e "${red}${bold}[ERROR]:${restore_color} .zshrc already exists"
+  echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."    
+else
+  ln -s $(echo $(pwd)/.zshrc) ~/.zshrc
+  echo -e "${green}${bold}[OK]:${restore_color} .zshrc has linked"
+fi

@@ -1,3 +1,9 @@
+# path
+export PATH=/opt/brew/bin:$PATH
+
+# alias
+alias emacs="emacs -nw"
+
 # lang
 export LANG=ja_JP.UTF-8
 
@@ -26,3 +32,5 @@ setopt no_beep
 setopt auto_cd
 setopt auto_pushd
 
+# add completion
+fpath=/opt/brew/share/zsh-completions
