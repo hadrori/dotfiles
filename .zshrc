@@ -15,7 +15,6 @@ export LANG=ja_JP.UTF-8
 eval "$(~/.henv/bin/henv init)"
 
 # alias
-alias emacs="emacs -nw"
 alias rx="rbenv exec"
 alias bx="rbenv exec bundle exec"
 alias g++="g++ -O2 -Wall -std=c++11"
