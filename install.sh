@@ -14,7 +14,7 @@ function link_file() {
     echo -e "${red}${bold}[ERROR]:${restore_color} $1 already exists"
     echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."
   else
-    ln -s ./$1 ~/$1
+    ln -s $(pwd)/$1 ~/$1
     echo -e "${green}${bold}[OK]:${restore_color} $1 has linked"
   fi
 }
