@@ -18,6 +18,6 @@ eval "$(~/.henv/bin/henv init)"
 alias emacs="emacs -nw"
 alias rx="rbenv exec"
 alias bx="rbenv exec bundle exec"
-alias g++="g++ -O2 -Wall -std=c++11"
+alias g++="g++-5 -O2 -Wall -std=c++11"
 
 function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
