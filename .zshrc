@@ -25,3 +25,7 @@ function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
 export GOPATH=$HOME/Codes/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH=${PYENV_ROOT}/bin:$PATH
+eval "$(pyenv init -)"
