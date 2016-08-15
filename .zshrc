@@ -21,3 +21,8 @@ alias bx="rbenv exec bundle exec"
 alias g++="g++-5 -O2 -Wall -std=c++11"
 
 function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
+
+# GO
+export GOPATH=$HOME/Codes/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
