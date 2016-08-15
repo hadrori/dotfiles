@@ -18,6 +18,7 @@ eval "$(~/.henv/bin/henv init)"
 alias rx="rbenv exec"
 alias bx="rbenv exec bundle exec"
 alias g++="g++-6 -O2 -Wall -std=c++11"
+alias topcoder="open ~/Codes/procon/SRM/ContestAppletProd.jnlp"
 
 function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
 
