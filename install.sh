@@ -12,7 +12,6 @@ restore_color='\033[0m\033[22m'
 link_file() {
   if [ -e ~/$1 ]; then
     echo -e "${red}${bold}[ERROR]:${restore_color} $1 already exists"
-    echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."
   else
     ln -s $(pwd)/$1 ~/$1
     echo -e "${green}${bold}[OK]:${restore_color} $1 has linked"
