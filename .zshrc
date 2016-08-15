@@ -17,6 +17,11 @@ eval "$(~/.henv/bin/henv init)"
 # alias
 alias rx="rbenv exec"
 alias bx="rbenv exec bundle exec"
-alias g++="g++ -O2 -Wall -std=c++11"
+alias g++="g++-6 -O2 -Wall -std=c++11"
 
 function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
+
+# GO
+export GOPATH=$HOME/Codes/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN

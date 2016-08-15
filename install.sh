@@ -9,7 +9,7 @@ green='\033[0;32m'
 bold='\033[1m'
 restore_color='\033[0m\033[22m'
 
-function link_file() {
+link_file() {
   if [ -e ~/$1 ]; then
     echo -e "${red}${bold}[ERROR]:${restore_color} $1 already exists"
     echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."
@@ -20,6 +20,7 @@ function link_file() {
 }
 
 link_file .bash_profile
-link_file .tmux.conf
 link_file .zshrc
+link_file .tmux.conf
 link_file .zprofile
+link_file .gitconfig

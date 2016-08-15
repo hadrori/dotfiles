@@ -1,0 +1,10 @@
+[user]
+	name = hadrori
+	email = hadrori.hs@gmail.com
+[core]
+	pager = lv -c
+	editor = emacs -nw
+[color]
+	ui = auto
+[push]
+	default = matching
