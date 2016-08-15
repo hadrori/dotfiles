@@ -23,3 +23,4 @@ link_file .zshrc
 link_file .tmux.conf
 link_file .zprofile
 link_file .gitconfig
+link_file contestapplet.conf
