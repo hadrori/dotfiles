@@ -32,3 +32,11 @@ else
   ln -s $(echo $(pwd)/.zshrc) ~/.zshrc
   echo -e "${green}${bold}[OK]:${restore_color} .zshrc has linked"
 fi
+
+if [ -e ~/.gitconfig ]; then
+  echo -e "${red}${bold}[ERROR]:${restore_color} .gitconfig already exists"
+  echo -e "${red}${bold}[ERROR]:${restore_color} You should merge files by hand."    
+else
+  ln -s $(echo $(pwd)/.gitconfig) ~/.gitconfig
+  echo -e "${green}${bold}[OK]:${restore_color} .gitconfig has linked"
+fi
