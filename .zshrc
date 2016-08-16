@@ -23,6 +23,7 @@ alias topcoder="open ~/Codes/procon/SRM/ContestAppletProd.jnlp"
 function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
 
 # GO
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH=$HOME/Codes/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
