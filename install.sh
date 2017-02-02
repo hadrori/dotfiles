@@ -15,11 +15,13 @@ fi
 
 link_file() {
   if [ -e ~/$1 ]; then
-    echo -e "${red}${bold}[ERROR]:${restore_color} $1 already exists"
-  else
-    ln -s $DEST_DIR/$1 ~/$1
-    echo -e "${green}${bold}[OK]:${restore_color} $1 has linked"
+    echo -e "${red}${bold}[Warning]:${restore_color} $1 already exists"
+    echo "Removing ..."
+    rm ~/$1
   fi
+  echo "Linking ..."
+  ln -s $DEST_DIR/$1 ~/$1
+  echo -e "${green}${bold}[OK]:${restore_color} $1 has linked"
 }
 
 link_file .bash_profile

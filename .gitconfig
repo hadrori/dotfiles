@@ -2,8 +2,8 @@
 	name = hadrori
 	email = hadrori.hs@gmail.com
 [core]
-	pager = lv -c
-	editor = emacs -nw
+	pager = less -c
+	editor = emacs
 [color]
 	ui = auto
 [push]
