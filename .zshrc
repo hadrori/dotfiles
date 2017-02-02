@@ -19,7 +19,7 @@ plugins=(git ruby bundler rails emoji-clock)
 # # alias
 # alias rx="rbenv exec"
 # alias bx="rbenv exec bundle exec"
-# alias g++="g++-6 -O2 -Wall -std=c++11"
+alias g++="g++ -O2 -Wall -std=c++11"
 # alias topcoder="open ~/Codes/procon/SRM/ContestAppletProd.jnlp"
 
 # function texpdf() { platex $1.tex; dvipdfmx $1.dvi; open $1.pdf; }
@@ -32,3 +32,12 @@ plugins=(git ruby bundler rails emoji-clock)
 # export PYENV_ROOT="${HOME}/.pyenv"
 # export PATH=${PYENV_ROOT}/bin:$PATH
 # eval "$(pyenv init -)"
+
+# Copy & Paste
+function pbcopy() {
+    cat -> /dev/clipboard
+}
+
+function pbpaste() {
+    cat /dev/clipboard
+}
