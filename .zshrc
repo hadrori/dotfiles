@@ -5,7 +5,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # export PATH="/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
 
-export PATH=$PATH:/mingw64/bin:/home/hadrori/.cask/bin
+export PATH=$PATH:/mingw64/bin:/home/hadrori/.cask/bin:/home/hadrori/.rbenv/bin
 
 plugins=(git ruby bundler rails emoji-clock)
 # SHELL="$(brew --prefix)/bin/zsh"
@@ -41,3 +41,6 @@ function pbcopy() {
 function pbpaste() {
     cat /dev/clipboard
 }
+
+# ruby
+eval "$(rbenv init)"
