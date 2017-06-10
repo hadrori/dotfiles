@@ -1,11 +1,15 @@
-export ZSH=/Users/hadrori/.oh-my-zsh
+export ZSH=/home/hadrori/.oh-my-zsh
 export ZSH_THEME="af-magic"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 plugins=(git ruby osx bundler brew rails emoji-clock)
 
 # language
 export LANG=ja_JP.UTF-8
+
+# Clipboard
+alias pbcopy="xsel --clipboard --input"
+alias pbpaste="xsel --clipboard --output"

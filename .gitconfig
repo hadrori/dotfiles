@@ -2,9 +2,12 @@
 	name = hadrori
 	email = hadrori.hs@gmail.com
 [core]
-	pager = lv -c
 	editor = emacs
 [color]
 	ui = auto
 [push]
 	default = matching
+[pager]
+    log = diff-so-fancy | less
+    show = diff-so-fancy | less
+    diff = diff-so-fancy | less
