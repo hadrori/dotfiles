@@ -3,7 +3,7 @@
 	email = hadrori.hs@gmail.com
 [core]
 	pager = lv -c
-	editor = emacs -nw
+	editor = emacs
 [color]
 	ui = auto
 [push]
