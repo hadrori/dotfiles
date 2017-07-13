@@ -16,6 +16,10 @@ setopt prompt_subst
 
 function precmd() {
     vcs_info
+    PROMPT="%F{237}------------------------------------------------------------%{$reset_color%}
+%F{032}%~%{$reset_color%} \
+$(git_prompt_info)\
+%F{105}%(!.#.$)%{$reset_color%} "
 }
 
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
@@ -28,10 +32,6 @@ function git_prompt_info() {
 }
 
 # primary prompt
-PROMPT="%F{237}------------------------------------------------------------%{$reset_color%}
-%F{032}%~%{$reset_color%} \
-$(git_prompt_info)\
-%F{105}%(!.#.$)%{$reset_color%} "
 PROMPT2="%{$F{red}%}\ %{$reset_color%}"
 RPS1="${return_code}"
 
