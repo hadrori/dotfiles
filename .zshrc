@@ -1,11 +1,12 @@
-export ZSH=/Users/hadrori/.oh-my-zsh
-export ZSH_THEME="af-magic"
-source $ZSH/oh-my-zsh.sh
+source "$HOME/.zsh-theme.sh"
+
+# History
+HISTFILE=~/.zsh_history
+setopt SHARE_HISTORY
 
 # User configuration
-export PATH="/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="$PATH:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
 
-plugins=(git ruby osx bundler brew rails emoji-clock)
 SHELL="$(brew --prefix)/bin/zsh"
 
 # language
@@ -31,3 +32,8 @@ export PATH=$PATH:$GOBIN
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH=${PYENV_ROOT}/bin:$PATH
 eval "$(pyenv init -)"
+
+# Load local configuration
+if [[ -e "$HOME/.zshrc.local" ]]; then
+    source "$HOME/.zshrc.local"
+fi
