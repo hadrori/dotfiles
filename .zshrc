@@ -1,6 +1,9 @@
 ### History ###
 HISTFILE=~/.zsh_history
-setopt SHARE_HISTORY
+HISTSIZE=10000
+SAVEHIST=10000
+setopt inc_append_history
+setopt share_history
 
 ### Prompt ###
 autoload -U colors

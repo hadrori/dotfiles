@@ -1,13 +1,15 @@
 [user]
-	name = hadrori
-	email = hadrori.hs@gmail.com
+    name = hadrori
+    email = hadrori.hs@gmail.com
 [core]
-	editor = emacs
+    editor = emacs
 [color]
-	ui = auto
+    ui = auto
+    diff = always
+    log = always
 [push]
-	default = matching
+    default = matching
 [pager]
-    log = diff-so-fancy | less
-    show = diff-so-fancy | less
-    diff = diff-so-fancy | less
+    log = less -r
+    show = less -r
+    diff = less -r
