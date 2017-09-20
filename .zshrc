@@ -40,7 +40,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 function +vi-git-untracked() {
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]]; then
         if git status --porcelain | grep '??' &> /dev/null ; then
-            hook_com[staged]+='%F{214}+%f'}
+            hook_com[staged]+='%F{214}+%f'
         fi
     fi
 }
