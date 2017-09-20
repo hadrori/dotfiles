@@ -53,7 +53,7 @@ RPS1="${return_code}"
 RPROMPT="%F{249}%n@%m%f%"
 
 # User configuration
-export PATH="$PATH:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:/Users/hadrori/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="$PATH:/opt/brew/bin:/opt/brew/sbin:$HOME/.rbenv/shims:/opt/brew/bin:/opt/brew/sbin:$HOME/.henv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$HOME/.cargo/bin"
 
 SHELL="$(brew --prefix)/bin/zsh"
 
