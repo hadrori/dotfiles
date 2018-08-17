@@ -14,7 +14,7 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' formats '%F{075}(%F{078}%b%F{214}%u%c%F{075})'
-zstyle ':vcs_info:*' actionformats '%R/(%a |%m )'
+zstyle ':vcs_info:*' actionformats '%R/(%b|%a)'
 zstyle ':vcs_info:*' unstagedstr '%F{214}*'
 zstyle ':vcs_info:*' stagedstr '%F{green}*'
 
