@@ -56,6 +56,22 @@ RPROMPT="%F{249}%n@%m%f %F{249}[%D{%F %T}]"
 alias ls="ls --color=auto"
 export LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
 
+### cd history ###
+setopt auto_pushd
+autoload -U read-from-minibuffer
+function popd-in-place() {
+    if [[ `dirs -p | wc -l` -eq 1 ]]; then
+        read-from-minibuffer -k 1 "directory stack empty"
+    else
+        popd > /dev/null
+        zle reset-prompt
+    fi
+}
+zle -N popd-in-place
+
+### keybind ###
+bindkey '^O' popd-in-place
+
 ### User configuration ###
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
