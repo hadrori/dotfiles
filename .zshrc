@@ -9,6 +9,33 @@ setopt share_history
 autoload -U colors
 colors
 
+### PATH ###
+contains() {
+    string="$1"
+    substring="$2"
+    if test "${string#*$substring}" != "$string"
+    then
+        return 0    # $substring is in $string
+    else
+        return 1    # $substring is not in $string
+    fi
+}
+
+# Prepend a value to the beginning of the PATH iff it is not already present in PATH
+path__prepend() {
+    local already_in_path
+    contains "$PATH" "$1" && already_in_path=true
+    force="$2"
+
+    if [ -n "${force}" ] || ([ -d "$1" ] && [ -z "${already_in_path}" ]); then
+        if [ -z "${PATH}" ]; then
+            PATH="$1"
+        else
+            PATH="$1:$PATH"
+        fi
+    fi
+}
+
 # git settings
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' get-revision true
@@ -77,11 +104,22 @@ zle -N popd-in-place
 bindkey '^O' popd-in-place
 
 ### User configuration ###
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+path__prepend "/sbin"
+path__prepend "/usr/sbin"
+path__prepend "/bin"
+path__prepend "/usr/bin"
+path__prepend "/usr/local/bin"
 
 ### Clipboard ###
-alias pbcopy="xsel --clipboard --input"
-alias pbpaste="xsel --clipboard --output"
+
+case ${OSTYPE} in
+    darwin*)
+        ;;
+    linux*)
+        alias pbcopy="xsel --clipboard --input"
+        alias pbpaste="xsel --clipboard --output"
+        ;;
+esac
 
 ### Load local configuration ###
 if [[ -e "$HOME/.zshrc.local" ]]; then
