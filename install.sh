@@ -9,15 +9,15 @@ green='\033[0;32m'
 bold='\033[1m'
 restore_color='\033[0m\033[22m'
 
-if [ -z "$DEST_DIR" ]; then
-  export DEST_DIR="$HOME/.dotfiles"
+if [ -z "$SRC_DIR" ]; then
+  export SRC_DIR="$HOME/.dotfiles"
 fi
 
 link_file() {
   if [ -e ~/$1 ]; then
     echo -e "${red}${bold}[ERROR]:${restore_color} $1 already exists"
   else
-    ln -s $DEST_DIR/$1 ~/$1
+    ln -s $SRC_DIR/$1 ~/$1
     echo -e "${green}${bold}[OK]:${restore_color} $1 has linked"
   fi
 }
